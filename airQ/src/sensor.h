@@ -6,6 +6,7 @@
 #include <sstream>
 #include <cmath>
 
+
 class Sensor{
 
 private:
@@ -14,17 +15,21 @@ private:
     int _limite;
 
 public:
-    Sensor(int tamano = 1, int limite = 100){
+    Sensor(int tamano = 0, int limite = 100){
         _dato = new double[tamano];
         _tamano = tamano;
         _limite = limite;
         for (int i = 0 ; i < _tamano; i++) _dato[i] = 0. ;
     }
-    ~Sensor(){ delete []_dato; }
+    Sensor(){ delete []_dato; }
     double leerDato(int i = 0){ if(i<_tamano) return _dato[i]; else return 0 ; }
-    void actualizar(){
+
+
+
+    void actualizar(int inferior,int superior){
         for(int i=0; i < _tamano; i++)
-            _dato[i] = ( rand() % _limite * 10 ) / 10.;
+            _dato[i] = ( inferior + rand() % (inferior-superior) );
+
     }
     std::string mostrarDatos(){
         std::stringstream a;
@@ -37,6 +42,10 @@ public:
 
     void acumularEn( int i = 0, double d = 0 ){ _dato[i] += d;}
     double promediarEntre( int i = 0, double n = 1 ){ return _dato[i] / n ;}
+
+
+
+
 };
 
 

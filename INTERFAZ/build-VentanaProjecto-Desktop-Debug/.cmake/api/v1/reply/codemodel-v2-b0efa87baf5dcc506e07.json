@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "VentanaProjecto",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "VentanaProjecto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VentanaProjecto-Debug-50968ea0ac980a965445.json",
+					"name" : "VentanaProjecto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VentanaProjecto_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VentanaProjecto_autogen-Debug-f9cf45ad4e0065836e48.json",
+					"name" : "VentanaProjecto_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/libardoalse/Documents/Preyecto/ALSE_2220/INTERFAZ/build-VentanaProjecto-Desktop-Debug",
+		"source" : "/home/libardoalse/Documents/Preyecto/ALSE_2220/INTERFAZ/VentanaProjecto"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

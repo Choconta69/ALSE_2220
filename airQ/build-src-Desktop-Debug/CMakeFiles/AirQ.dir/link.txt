@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/AirQ.dir/sensor.cpp.o CMakeFiles/AirQ.dir/main.cpp.o  -o AirQ 
