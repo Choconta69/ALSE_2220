@@ -70,10 +70,6 @@ sensor.h
 sensor.h
 /home/libardoalse/Documents/Preyecto/ALSE_2220/airQ/src/sensor.h
 
-/home/libardoalse/Documents/Preyecto/ALSE_2220/airQ/src/sensor.cpp
-sensor.h
-/home/libardoalse/Documents/Preyecto/ALSE_2220/airQ/src/sensor.h
-
 /home/libardoalse/Documents/Preyecto/ALSE_2220/airQ/src/sensor.h
 iostream
 -
@@ -82,6 +78,8 @@ string
 sstream
 -
 cmath
+-
+cstdlib
 -
 
 /home/libardoalse/Documents/Preyecto/ALSE_2220/airQ/src/temp.h

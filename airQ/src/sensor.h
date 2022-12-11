@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <cstdlib>
 
 
 class Sensor{
@@ -28,7 +29,7 @@ public:
 
     void actualizar(int inferior,int superior){
         for(int i=0; i < _tamano; i++)
-            _dato[i] = ( inferior + rand() % (inferior-superior) );
+            _dato[i] = ( inferior + rand() % ( superior - inferior ) );
 
     }
     std::string mostrarDatos(){

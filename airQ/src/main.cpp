@@ -116,6 +116,7 @@ int main(){
 
     int contador = 1;
 
+
     double p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,pt;
     double min1,min2,min3,min4,min5,min6,max1,max2,max3,max4,max5,max6;
 
@@ -174,6 +175,7 @@ int main(){
 
             p1=p2=p3=p4=p5=p6=p7=p8=p9=p10=p11=p12=p13=pt=0;
             min1=min2=min3=min4=min5=min6=max1=max2=max3=max4=max5=max6=0;
+
             for(size_t  i= 0; i< _nvec.size(); i++ ){
                 p1 += _nvec[i].NiO();
                 p2 += _nvec[i].NiO2();
@@ -213,12 +215,22 @@ int main(){
 
                 p8 += _tcvec[i].tempe();
 
-                p8 = p8/_tcvec.size();
+                p8 = p8 /_tcvec.size();
 
 
+                if(i==1){
+                    max1=_tcvec[i].tempe();
+                    min1=_tcvec[i].tempe();
 
-
-
+                }
+                else{
+                    if(_tcvec[i].tempe() > max1){
+                        max1=_tcvec[i].tempe();
+                    }
+                    if(_tcvec[i].tempe() < min1){
+                        min1=_tcvec[i].tempe();
+                    }
+                }
 
 
 
@@ -226,54 +238,128 @@ int main(){
             }
 
 
-            std::cout<< "min:" << min1 <<"  promedio de temperatura en centrigrados: "<< p8  << " max  "  <<   max1 <<std::endl;
+
+            std::cout<< " min: " << min1 << " promedio de temperatura en centrigrados: " << p8 << " max: "  <<  max1 <<std::endl;
 
             for(size_t  i= 0; i< _huvec.size(); i++ ){
                 p9 += _huvec[i].hum();
 
                 p9 = p9/_huvec.size();
 
+                if(i==1){
+                    max2=_huvec[i].hum();
+                    min2=_huvec[i].hum();
+
+                }
+                else{
+                    if(_huvec[i].hum() > max2){
+                        max2=_huvec[i].hum();
+                    }
+                    if(_huvec[i].hum() < min2){
+                        min2=_huvec[i].hum();
+                    }
+                }
+
+
 
                 }
 
 
-            //std::cout<< "promedio de humedad: "<< p9 << "  " <<std::endl;
+            std::cout<< " min: " << min2 << " promedio de humedad: " << p9 <<" max: "<< max2 << "  " <<std::endl;
 
             for(size_t  i= 0; i< _vmsvec.size(); i++ ){
                 p10 += _vmsvec[i].veloci();
 
                 p10 = p10/_vmsvec.size();
 
+                if(i==1){
+                    max3=_vmsvec[i].veloci();
+                    min3=_vmsvec[i].veloci();
+
+                }
+                else{
+                    if(_vmsvec[i].veloci() > max3){
+                        max3=_vmsvec[i].veloci();
+                    }
+                    if(_vmsvec[i].veloci() < min3){
+                        min3=_tcvec[i].tempe();
+                    }
+                }
+
+
 
             }
-            //std::cout<< "promedio de velocidad: "<< p10 << "  " <<std::endl;
+            std::cout<< " min: " << min3 << " promedio de velocidad: " << p10 << " max: " << max3 << "  " <<std::endl;
 
             for(size_t  i= 0; i< _dirvec.size(); i++ ){
                 p11 += _dirvec[i].direccion();
 
                 p11 = p11/_dirvec.size();
 
+                if(i==1){
+                    max4=_dirvec[i].direccion();
+                    min4=_dirvec[i].direccion();
+
+                }
+                else{
+                    if(_dirvec[i].direccion() > max4){
+                        max4=_dirvec[i].direccion();
+                    }
+                    if(_dirvec[i].direccion() < min4){
+                        min4=_dirvec[i].direccion();
+                    }
+                }
+
 
             }
-            //std::cout<< "promedio de direccion: "<< p11 << "  " <<std::endl;
+            std::cout<< "min:" << min4 << " promedio de direccion: " << p11 << " max: " << max4 << "  " <<std::endl;
 
             for(size_t  i= 0; i< _prevec.size(); i++ ){
                 p12 += _prevec[i].precipitacion();
 
                 p12 = p12/_prevec.size();
 
+                if(i==1){
+                    max5=_prevec[i].precipitacion();
+                    min5=_prevec[i].precipitacion();
+
+                }
+                else{
+                    if(_prevec[i].precipitacion() > max5){
+                        max5=_prevec[i].precipitacion();
+                    }
+                    if(_prevec[i].precipitacion() < min5){
+                        min5=_prevec[i].precipitacion();
+                    }
+                }
+
 
             }
-            //std::cout<< "promedio de precipitacion: "<< p12 << "  " <<std::endl;
+            std::cout<< " min: " << min5 << " promedio de precipitacion: " << p12 << " max: " << max5 <<  "  " <<std::endl;
 
             for(size_t  i= 0; i< _ilvec.size(); i++ ){
+
                 p13 += _ilvec[i].intensidad();
 
                 p13 = p13/_ilvec.size();
 
+                if(i==1){
+                    max6=_ilvec[i].intensidad();
+                    min6=_ilvec[i].intensidad();
+
+                }
+                else{
+                    if(_ilvec[i].intensidad() > max6){
+                        max6=_ilvec[i].intensidad();
+                    }
+                    if(_ilvec[i].intensidad() < min6){
+                        min6=_ilvec[i].intensidad();
+                    }
+                }
+
 
             }
-            //std::cout<< "promedio de intensidad de la luz: "<< p13 << "  " <<std::endl;
+            std::cout<< " min: " << min6 << " promedio de intensidad de la luz: " << p13 << " max: " << max6 << " "   <<std::endl;
 
 
 
